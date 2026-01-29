@@ -1,0 +1,11 @@
+# C++ build artifacts
+*.o
+*.out
+fib
+main
+
+# VS Code
+.vscode/
+
+# Misc
+*~
