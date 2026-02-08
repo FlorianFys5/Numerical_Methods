@@ -1,4 +1,6 @@
 # C++ build artifacts
+main
+*.o
 fib
 main
 
