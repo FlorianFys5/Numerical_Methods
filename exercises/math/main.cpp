@@ -23,4 +23,12 @@ int main(){
                   << "\t" << sfunc::fgamma(x)
                   << "\n";
     }
+    std::cout << "x\tstd::lgamma(x)\tstirling approximation\n";
+    for (int i = 1; i <= 10; ++i) {
+        double x = static_cast<double>(i);
+        std::cout << x
+                  << "\t" << std::lgamma(x)
+                  << "\t" << sfunc::lngamma(x)
+                  << "\n";
+    }
 }
