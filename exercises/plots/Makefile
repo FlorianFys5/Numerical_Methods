@@ -20,6 +20,6 @@ Plot.png: Out.txt plot_script.gp
 	gnuplot plot_script.gp
 
 clean:
-	rm -f main *.o
+	rm -f main *.o Plot.png
 
 .PHONY: all clean
