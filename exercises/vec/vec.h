@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include<limits>
+#include<cmath>
 namespace Vector{
     struct Vec {
         double x{}, y{}, z{};
@@ -11,7 +12,7 @@ namespace Vector{
         : x(x_), y(y_), z(z_) {}
 
         constexpr double norm() const {
-            return x*x + y*y + z*z;
+            return std::sqrt(x*x + y*y + z*z);
         }
         void print(std::string s) const {
             std::cout<<s<<" ("<<x<<","<<y<<","<<z<<")"<<std::endl;
@@ -41,5 +42,6 @@ namespace Vector{
     Vec cross(const Vec& a, const Vec& b);
     bool approx(double a, double b, double acc = 1e-9, double eps = 1e-9);
     bool Approx(const Vec& a, const Vec& b);
+    std::ostream& operator<<(std::ostream& os, const Vec& v);
 }
     

@@ -21,4 +21,6 @@ int main(){
     std::cout<<"b*5: "<<std::endl;
     b.print("b=");
     std::cout<<"approx(c,b): "<<Vector::Approx(c,b)<<std::endl;
+    std::cout<<"Operator overload print:"<<std::endl;
+    std::cout<<b;
 }

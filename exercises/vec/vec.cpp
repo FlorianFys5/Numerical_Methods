@@ -43,4 +43,8 @@ bool Approx(const Vec& a, const Vec& b){
 	if(!approx(a.z,b.z))return false;
 	return true;
 }
+std::ostream& operator<<(std::ostream& os, const Vec& v){
+os << "{ " << v.x << ", " << v.y << ", " << v.z << " } ";
+return os;
+}
 }
