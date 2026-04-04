@@ -1,4 +1,4 @@
-#include "Lin_eq.h"
+#include "lin_eq.h"
 #include <iostream>
 #include <random>
 

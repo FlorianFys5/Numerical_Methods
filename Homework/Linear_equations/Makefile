@@ -10,13 +10,13 @@ Out.txt: main
 main: main.o
 	$(CXX) main.o -o main $(LDLIBS)
 
-main.o: main.cpp Lin_eq.h
+main.o: main.cpp lin_eq.h
 	$(CXX) $(CXXFLAGS) -c main.cpp -o main.o
 
 time: time.o
 	$(CXX) time.o -o time $(LDLIBS)
 
-time.o: time.cpp Lin_eq.h
+time.o: time.cpp lin_eq.h
 	$(CXX) $(CXXFLAGS) -c time.cpp -o time.o
 
 out.times.data: time

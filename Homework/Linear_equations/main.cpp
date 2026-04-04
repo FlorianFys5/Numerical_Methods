@@ -1,4 +1,4 @@
-#include "Lin_eq.h"
+#include "lin_eq.h"
 #include <iostream>
 std::mt19937 gen(20);
 int main(){

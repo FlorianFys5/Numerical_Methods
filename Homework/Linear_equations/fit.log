@@ -1,7 +1,7 @@
 
 
 *******************************************************************************
-Fri Apr  3 17:09:57 2026
+Sat Apr  4 14:04:40 2026
 
 
 FIT:    data read from "out.times.data" using (log($1)):(log($2))
@@ -14,21 +14,21 @@ function used for fitting: g(x)
 fitted parameters initialized with current variable values
 
 iter      chisq       delta/lim  lambda   alpha         beta         
-   0 1.3830636015e+03   0.00e+00  4.14e+00    1.000000e+00   1.000000e+00
-   5 4.8187956250e-01  -2.91e-03  4.14e-05   -2.045594e+01   2.999386e+00
+   0 1.4434063164e+03   0.00e+00  4.14e+00    1.000000e+00   1.000000e+00
+   5 2.2971599399e-01  -6.67e-03  4.14e-05   -2.142213e+01   3.129808e+00
 
 After 5 iterations the fit converged.
-final sum of squares of residuals : 0.48188
-rel. change during last iteration : -2.90935e-08
+final sum of squares of residuals : 0.229716
+rel. change during last iteration : -6.66912e-08
 
 degrees of freedom    (FIT_NDF)                        : 12
-rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.200391
-variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0401566
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.138358
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.019143
 
 Final set of parameters            Asymptotic Standard Error
 =======================            ==========================
-alpha           = -20.4559         +/- 1.211        (5.919%)
-beta            = 2.99939          +/- 0.2097       (6.992%)
+alpha           = -21.4221         +/- 0.8359       (3.902%)
+beta            = 3.12981          +/- 0.1448       (4.626%)
 
 correlation matrix of the fit parameters:
                 alpha  beta   
