@@ -6,4 +6,4 @@ set xlabel "x"
 set ylabel "y"
 set grid
 
-plot "elliptic.dat" using (1/$2)*cos($1):(1/$2)*sin($1) with lines notitle 
+plot "elliptic.dat" using (1/$2)*cos($1):(1/$2)*sin($1) with lines title "Elliptic"
