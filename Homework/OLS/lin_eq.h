@@ -7,7 +7,7 @@
 #include <functional>
 #include <cstddef>
 
-namespace linalg {
+namespace linalg { //most of the Vector and Matrix struct is AI for convenience
 
 template<typename T>
 T conj_if_needed(const T& x) {
@@ -429,36 +429,30 @@ Matrix<T> random_matrix(size_t rows, size_t cols,
 }
 
 template<typename T>
-struct QR {
+struct QR{
     Matrix<T> Q;
     Matrix<T> R;
 
     QR(const Matrix<T>& A) {
-        //size_t m = A.rows();
-        size_t n = A.cols();
-
-        Q = A;
-        R = Matrix<T>(n, n);
-        for (size_t i =0;i<n; i++){
-            for (size_t j=0;j<i; j++){
-                R(j,i) = Q[j].dot(Q[i]);
-                Q[i] -= Q[j] * R(j,i); 
+        Q= A; 
+        size_t m =A.cols();
+        R= Matrix<T>(m,m) ;
+        for (size_t i=0;i<m; i++){
+        R(i,i)=Q[i].norm();
+        Q[i]/=R(i,i);
+        for (size_t j=i+1;j<m; j++){
+            R(i,j)=Q[i].dot(Q[j]);
+            Q[j]-=Q[i]*R(i,j); 
             } 
-            auto norm = Q[i].norm();
-            if (norm == 0.0)
-                throw std::runtime_error("Matrix is rank deficient");
-
-            R(i,i) = static_cast<T>(norm);
-            Q[i] /= R(i,i);
         }
-
     }
+
 
     Vector<T> solve(const Vector<T>& b){
         Vector<T> c=Q.dagger()*b;
         int n = R.cols();
         Vector<T> x(n);
-        for(int i = static_cast<int>(n)-1; i >= 0; i--){
+        for(int i = n-1; i >= 0; i--){
             T sum=T{0};
             for(int k=i+1; k<n; k++)
                 sum+=R(i,k)*x[k];
