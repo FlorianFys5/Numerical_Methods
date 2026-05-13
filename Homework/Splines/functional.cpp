@@ -1,9 +1,9 @@
 #include<iostream>
 #include "lin_eq.h"
 int main(){
-    std::vector<double> x, y;  //vector construction AI
+    std::vector<double> x, y;  
 
-    for (double xi = 0; xi <= 9; xi += 0.2) {
+    for (double xi = 0; xi <= 9; xi += 0.2) { //vector construction AI
         x.push_back(xi);
         y.push_back(std::cos(xi));
     }
