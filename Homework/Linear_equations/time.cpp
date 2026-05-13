@@ -6,7 +6,7 @@ int main(int argc, char** argv) {
     if (argc < 2) {
         std::cerr << "Usage: ./time N\n";
         return 1;
-    }
+    }//quick check recommended by AI
 
     size_t N = std::stoul(argv[1]);
 
