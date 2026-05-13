@@ -8,16 +8,6 @@ double norm_cubic(double& x1, double& y1, double& x2, double& y2){
     double norm = diff.norm();
     return norm*(diff[0]*diff[0]+diff[1]*diff[1]);
 }
-double inv_r3(double x1, double y1,
-              double x2, double y2)
-{
-    double dx = x1 - x2;
-    double dy = y1 - y2;
-
-    double r2 = dx*dx + dy*dy + 1e-6;
-
-    return 1.0 / (r2 * std::sqrt(r2));
-}
 linalg::Vector<double> F(double x, linalg::Vector<double> y){
         x=x;
         auto dydx = linalg::Vector<double>(2);
@@ -51,15 +41,15 @@ linalg::Vector<double> Precession(double x, linalg::Vector<double> y){
 linalg::Vector<double> three_body(double x, linalg::Vector<double> y){
     x=x;
     auto dydx = linalg::Vector<double>(12);
-    double r12 = inv_r3(y[8],y[9],y[6],y[7]);
-    double r13 = inv_r3(y[10],y[11],y[6],y[7]);
-    double r23 = inv_r3(y[10],y[11],y[8],y[9]);
-    dydx[0] = (y[8]-y[6])*r12+(y[10]-y[6])*r13;
-    dydx[1] = (y[9]-y[7])*r12+(y[11]-y[7])*r13;
-    dydx[2] = (y[6]-y[8])*r12+(y[10]-y[8])*r23;
-    dydx[3] = (y[7]-y[9])*r12+(y[11]-y[9])*r23;
-    dydx[4] = (y[6]-y[10])*r13+(y[8]-y[10])*r23;
-    dydx[5] = (y[7]-y[11])*r13+(y[9]-y[11])*r23;
+    double r12 = norm_cubic(y[8],y[9],y[6],y[7]);
+    double r13 = norm_cubic(y[10],y[11],y[6],y[7]);
+    double r23 = norm_cubic(y[10],y[11],y[8],y[9]);
+    dydx[0] = (y[8]-y[6])/r12+(y[10]-y[6])/r13;
+    dydx[1] = (y[9]-y[7])/r12+(y[11]-y[7])/r13;
+    dydx[2] = (y[6]-y[8])/r12+(y[10]-y[8])/r23;
+    dydx[3] = (y[7]-y[9])/r12+(y[11]-y[9])/r23;
+    dydx[4] = (y[6]-y[10])/r13+(y[8]-y[10])/r23;
+    dydx[5] = (y[7]-y[11])/r13+(y[9]-y[11])/r23;
     dydx[6]=y[0];
     dydx[7]=y[1];
     dydx[8]=y[2];
@@ -99,8 +89,8 @@ int main(){
         file5<<xs5[i]<<" "<<ys5[i][0]<<"\n";
     }
     std::ofstream file6("three_body.dat");
-    auto y3_0 = linalg::Vector<double>{0.466203685,0.43236573,0.466203685,0.43236573,-0.93240737,-0.86473146,-0.97000436,-0.24308753,0.97000436,0.24308753,0.0,0.0};
-    auto [xs6,ys6] = linalg::driver(three_body,0,40,y3_0,0.01);
+    auto y3_0 = linalg::Vector<double>{0.466203685,0.43236573,0.466203685,0.43236573,-0.93240737,-0.86473146,-0.97000436,0.24308753,0.97000436,-0.24308753,0.0,0.0};
+    auto [xs6,ys6] = linalg::driver(three_body,0,3,y3_0,0.125,1e-6,1e-6);
     for(size_t i=0;i<xs6.size();i++){
         file6<<xs6[i]<<" "<<ys6[i][6]<<" "<<ys6[i][7]<<" "<<ys6[i][8]<<" "<<ys6[i][9]<<" "<<ys6[i][10]<<" "<<ys6[i][11]<<"\n";
     }
