@@ -2,7 +2,7 @@
 #include<iostream>
 #include<chrono>
 std::mt19937 gen(20);
-int main(int argc, char* argv[]){
+int main(int argc, char* argv[]){ //I used AI to account for all the different "modes", which was quite cumbersome, so I used fstream afterwards
     if (argc < 4) {
         std::cerr << "Usage:\n";
         std::cerr << "./main mode rmax dr\n";

@@ -6,5 +6,6 @@ set xlabel "r"
 set ylabel "f(r)"
 set grid
 
-plot for [i=2:5] 'wave.dat' using 1:i with lines linewidth 2 title sprintf("psi_%d", i-2), \
+#smart plotting command by AI
+plot for [i=2:5] 'wave.dat' using 1:i with lines linewidth 2 title sprintf("psi_%d", i-2),\
      for [i=2:5] 'analytic_wave.dat' using 1:i with lines dashtype 2 lw 2 title sprintf("R_%d", i-2)
