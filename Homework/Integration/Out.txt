@@ -1,0 +1,12 @@
+sqrt|1,0= 0.666681, Error= 7.17421e-05, Actual Error= -1.42662e-05
+sqrt_inv|1,0= 2, Error= 5.9092e-09, Evals= 801228
+sqrt_inv|1,0 (Clenshaw-Curtis)= 2, Error= 6.81757e-09, Evals= 1904
+sqrt_inv|1,0 (Scipy quad)= 2, Error= 5.77316e-15, Evals= 231
+sqrt(1-x*x)|1,0= 0.785406, Error= 6.03037e-05, Actual Error= -8.14665e-06
+ln/sqrt|1,0= -4, Error= 6.1375e-07, Evals= 302996
+ln/sqrt|1,0 (Clenshaw-Curtis)= -4, Error= 6.32491e-07, Evals= 1948
+ln/sqrt|1,0 (Scipy quad)= -4, Error= 1.35447e-13, Evals= 315
+1/(x*x+1)|-inf to inf= 3.14159, Error= 5.50224e-09, Evals= 6208
+1/(x*x+1)|-inf to inf (Scipy quad)= 3.14159, Error= 5.15558e-10, Evals= 90
+exp(-abs(x))*cos(x)|-inf to inf= 1, Error= 4.67774e-09, Evals= 11816
+exp(-abs(x))*cos(x)|-inf to inf (Scipy quad)= 1, Error= 6.2295e-09, Evals= 390
