@@ -1,0 +1,843 @@
+
+
+*******************************************************************************
+Fri May 15 11:52:05 2026
+
+
+FIT:    data read from "circle.dat" using 1:4
+        format = x:z
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = alpha + x**beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   alpha         beta         
+   0 1.0101010323e+16   0.00e+00  4.67e+08    1.000000e+00   1.000000e+00
+  24 5.0245350021e-02  -5.40e-02  4.67e-16   -7.777323e-01  -1.820331e-02
+
+After 24 iterations the fit converged.
+final sum of squares of residuals : 0.0502454
+rel. change during last iteration : -5.4038e-07
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0915108
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00837423
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+alpha           = -0.777732        +/- 0.0806       (10.36%)
+beta            = -0.0182033       +/- 0.009005     (49.47%)
+
+correlation matrix of the fit parameters:
+                alpha  beta   
+alpha           1.000 
+beta           -0.916  1.000 
+
+
+*******************************************************************************
+Fri May 15 11:55:06 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   beta         
+   0 2.6343203671e+03   0.00e+00  1.16e+01    1.000000e+00
+   3 2.1774615298e+01  -2.31e-01  1.16e-02   -5.541795e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 21.7746
+rel. change during last iteration : -2.30868e-06
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.76371
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.11066
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+beta            = -0.55418         +/- 0.05363      (9.677%)
+
+
+*******************************************************************************
+Fri May 15 11:56:58 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   beta         
+   0 2.6343203671e+03   0.00e+00  1.16e+01    1.000000e+00
+   3 2.1774615298e+01  -2.31e-01  1.16e-02   -5.541795e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 21.7746
+rel. change during last iteration : -2.30868e-06
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.76371
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.11066
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+beta            = -0.55418         +/- 0.05363      (9.677%)
+
+
+*******************************************************************************
+Fri May 15 11:58:17 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   beta         
+   0 2.6343203671e+03   0.00e+00  1.16e+01    1.000000e+00
+   3 2.1774615298e+01  -2.31e-01  1.16e-02   -5.541795e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 21.7746
+rel. change during last iteration : -2.30868e-06
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.76371
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.11066
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+beta            = -0.55418         +/- 0.05363      (9.677%)
+
+
+*******************************************************************************
+Fri May 15 11:58:27 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   beta         
+   0 2.6343203671e+03   0.00e+00  1.16e+01    1.000000e+00
+   3 2.1774615298e+01  -2.31e-01  1.16e-02   -5.541795e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 21.7746
+rel. change during last iteration : -2.30868e-06
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.76371
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.11066
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+beta            = -0.55418         +/- 0.05363      (9.677%)
+
+
+*******************************************************************************
+Fri May 15 11:58:40 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   beta         
+   0 2.6343203671e+03   0.00e+00  1.16e+01    1.000000e+00
+   3 2.1774615298e+01  -2.31e-01  1.16e-02   -5.541795e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 21.7746
+rel. change during last iteration : -2.30868e-06
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.76371
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.11066
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+beta            = -0.55418         +/- 0.05363      (9.677%)
+
+
+*******************************************************************************
+Fri May 15 11:58:50 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   beta         
+   0 2.6343203671e+03   0.00e+00  1.16e+01    1.000000e+00
+   3 2.1774615298e+01  -2.31e-01  1.16e-02   -5.541795e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 21.7746
+rel. change during last iteration : -2.30868e-06
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.76371
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.11066
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+beta            = -0.55418         +/- 0.05363      (9.677%)
+
+
+*******************************************************************************
+Fri May 15 12:00:12 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = alpha + x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   alpha         beta         
+   0 2.9012161206e+03   0.00e+00  8.25e+00    1.000000e+00   1.000000e+00
+   4 2.1543350891e+01  -1.69e-02  8.25e-04   -3.747139e-01  -5.254614e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 21.5434
+rel. change during last iteration : -1.68662e-07
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.89488
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.59056
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+alpha           = -0.374714        +/- 1.476        (394%)
+beta            = -0.525461        +/- 0.127        (24.17%)
+
+correlation matrix of the fit parameters:
+                alpha  beta   
+alpha           1.000 
+beta           -0.891  1.000 
+
+
+*******************************************************************************
+Fri May 15 16:51:01 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 7
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = alpha + x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   alpha         beta         
+   0 2.0614026622e+03   0.00e+00  7.32e+00    1.000000e+00   1.000000e+00
+   4 2.1122942227e+01  -7.45e-03  7.32e-04   -1.624787e-01  -5.561856e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 21.1229
+rel. change during last iteration : -7.44748e-08
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.05538
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.22459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+alpha           = -0.162479        +/- 1.737        (1069%)
+beta            = -0.556186        +/- 0.1687       (30.33%)
+
+correlation matrix of the fit parameters:
+                alpha  beta   
+alpha           1.000 
+beta           -0.894  1.000 
+
+
+*******************************************************************************
+Fri May 15 16:51:01 2026
+
+
+FIT:    data read from "circle_quasi.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 7
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)= theta + x*omega
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   theta         omega        
+   0 7.2375030870e+02   0.00e+00  7.32e+00    1.000000e+00   1.000000e+00
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Fri May 15 16:52:12 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 7
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = alpha + x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   alpha         beta         
+   0 2.0614026622e+03   0.00e+00  7.32e+00    1.000000e+00   1.000000e+00
+   4 2.1122942227e+01  -7.45e-03  7.32e-04   -1.624787e-01  -5.561856e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 21.1229
+rel. change during last iteration : -7.44748e-08
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.05538
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.22459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+alpha           = -0.162479        +/- 1.737        (1069%)
+beta            = -0.556186        +/- 0.1687       (30.33%)
+
+correlation matrix of the fit parameters:
+                alpha  beta   
+alpha           1.000 
+beta           -0.894  1.000 
+
+
+*******************************************************************************
+Fri May 15 16:52:12 2026
+
+
+FIT:    data read from "circle_quasi.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)= theta + x*omega
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   theta         omega        
+   0 2.3487614462e+01   0.00e+00  1.37e+00    1.000000e+00   1.000000e+00
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Fri May 15 16:54:10 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 7
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = alpha + x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   alpha         beta         
+   0 2.0614026622e+03   0.00e+00  7.32e+00    1.000000e+00   1.000000e+00
+   4 2.1122942227e+01  -7.45e-03  7.32e-04   -1.624787e-01  -5.561856e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 21.1229
+rel. change during last iteration : -7.44748e-08
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.05538
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.22459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+alpha           = -0.162479        +/- 1.737        (1069%)
+beta            = -0.556186        +/- 0.1687       (30.33%)
+
+correlation matrix of the fit parameters:
+                alpha  beta   
+alpha           1.000 
+beta           -0.894  1.000 
+
+
+*******************************************************************************
+Fri May 15 16:54:10 2026
+
+
+FIT:    data read from "circle_quasi.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 7
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)= theta + x*omega
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   theta         omega        
+   0 7.2375030870e+02   0.00e+00  7.32e+00    1.000000e+00   1.000000e+00
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Fri May 15 16:55:53 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 7
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = alpha + x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   alpha         beta         
+   0 2.0614026622e+03   0.00e+00  7.32e+00    1.000000e+00   1.000000e+00
+   4 2.1122942227e+01  -7.45e-03  7.32e-04   -1.624787e-01  -5.561856e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 21.1229
+rel. change during last iteration : -7.44748e-08
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.05538
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.22459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+alpha           = -0.162479        +/- 1.737        (1069%)
+beta            = -0.556186        +/- 0.1687       (30.33%)
+
+correlation matrix of the fit parameters:
+                alpha  beta   
+alpha           1.000 
+beta           -0.894  1.000 
+
+
+*******************************************************************************
+Fri May 15 16:55:53 2026
+
+
+FIT:    data read from "circle_quasi.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 7
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)= theta + x*omega
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   theta         omega        
+   0 2.4736385463e+03   0.00e+00  7.32e+00    1.000000e+00   1.000000e+00
+   4 1.0117315618e+00  -6.43e-01  7.32e-04   -1.230881e+00  -6.288091e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 1.01173
+rel. change during last iteration : -6.43345e-06
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.449829
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.202346
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+theta           = -1.23088         +/- 0.3802       (30.89%)
+omega           = -0.628809        +/- 0.03692      (5.871%)
+
+correlation matrix of the fit parameters:
+                theta  omega  
+theta           1.000 
+omega          -0.894  1.000 
+
+
+*******************************************************************************
+Fri May 15 16:57:31 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = alpha + x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   alpha         beta         
+   0 2.0627313263e+03   0.00e+00  6.85e+00    1.000000e+00   1.000000e+00
+   4 2.1122998271e+01  -1.11e-03  6.85e-04   -1.583946e-01  -5.565403e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 21.123
+rel. change during last iteration : -1.10724e-08
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.8763
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.5205
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+alpha           = -0.158395        +/- 1.211        (764.6%)
+beta            = -0.55654         +/- 0.1257       (22.59%)
+
+correlation matrix of the fit parameters:
+                alpha  beta   
+alpha           1.000 
+beta           -0.837  1.000 
+
+
+*******************************************************************************
+Fri May 15 16:57:31 2026
+
+
+FIT:    data read from "circle_quasi.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)= theta + x*omega
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   theta         omega        
+   0 2.4736594928e+03   0.00e+00  6.85e+00    1.000000e+00   1.000000e+00
+   4 4.3037873511e+00  -6.19e-03  6.85e-04   -2.410436e-01  -7.147853e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 4.30379
+rel. change during last iteration : -6.19077e-08
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.846934
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.717298
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+theta           = -0.241044        +/- 0.5467       (226.8%)
+omega           = -0.714785        +/- 0.05676      (7.94%)
+
+correlation matrix of the fit parameters:
+                theta  omega  
+theta           1.000 
+omega          -0.837  1.000 
+
+
+*******************************************************************************
+Fri May 15 16:58:01 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 7
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = alpha + x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   alpha         beta         
+   0 2.0614026622e+03   0.00e+00  7.32e+00    1.000000e+00   1.000000e+00
+   4 2.1122942227e+01  -7.45e-03  7.32e-04   -1.624787e-01  -5.561856e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 21.1229
+rel. change during last iteration : -7.44748e-08
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.05538
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.22459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+alpha           = -0.162479        +/- 1.737        (1069%)
+beta            = -0.556186        +/- 0.1687       (30.33%)
+
+correlation matrix of the fit parameters:
+                alpha  beta   
+alpha           1.000 
+beta           -0.894  1.000 
+
+
+*******************************************************************************
+Fri May 15 16:58:01 2026
+
+
+FIT:    data read from "circle_quasi.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 7
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)= theta + x*omega
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   theta         omega        
+   0 2.4736385463e+03   0.00e+00  7.32e+00    1.000000e+00   1.000000e+00
+   4 1.0117315618e+00  -6.43e-01  7.32e-04   -1.230881e+00  -6.288091e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 1.01173
+rel. change during last iteration : -6.43345e-06
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.449829
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.202346
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+theta           = -1.23088         +/- 0.3802       (30.89%)
+omega           = -0.628809        +/- 0.03692      (5.871%)
+
+correlation matrix of the fit parameters:
+                theta  omega  
+theta           1.000 
+omega          -0.894  1.000 
+
+
+*******************************************************************************
+Fri May 15 16:59:35 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = alpha + x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   alpha         beta         
+   0 2.3989585705e+03   0.00e+00  7.82e+00    1.000000e+00   1.000000e+00
+   4 3.2729354989e+00  -2.06e-01  7.82e-04   -1.478131e+00  -3.699328e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 3.27294
+rel. change during last iteration : -2.06301e-06
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.738572
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.545489
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+alpha           = -1.47813         +/- 0.5451       (36.88%)
+beta            = -0.369933        +/- 0.04949      (13.38%)
+
+correlation matrix of the fit parameters:
+                alpha  beta   
+alpha           1.000 
+beta           -0.878  1.000 
+
+
+*******************************************************************************
+Fri May 15 16:59:35 2026
+
+
+FIT:    data read from "circle_quasi.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)= theta + x*omega
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   theta         omega        
+   0 3.6064577537e+03   0.00e+00  7.82e+00    1.000000e+00   1.000000e+00
+   4 4.1927443902e+01  -1.72e-02  7.82e-04   -1.584790e+00  -7.071584e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 41.9274
+rel. change during last iteration : -1.72066e-07
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.64347
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.98791
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+theta           = -1.58479         +/- 1.951        (123.1%)
+omega           = -0.707158        +/- 0.1771       (25.05%)
+
+correlation matrix of the fit parameters:
+                theta  omega  
+theta           1.000 
+omega          -0.878  1.000 
+
+
+*******************************************************************************
+Fri May 15 17:19:21 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = alpha + x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   alpha         beta         
+   0 2.3989585705e+03   0.00e+00  7.82e+00    1.000000e+00   1.000000e+00
+   4 3.2729354989e+00  -2.06e-01  7.82e-04   -1.478131e+00  -3.699328e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 3.27294
+rel. change during last iteration : -2.06301e-06
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.738572
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.545489
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+alpha           = -1.47813         +/- 0.5451       (36.88%)
+beta            = -0.369933        +/- 0.04949      (13.38%)
+
+correlation matrix of the fit parameters:
+                alpha  beta   
+alpha           1.000 
+beta           -0.878  1.000 
+
+
+*******************************************************************************
+Fri May 15 17:19:21 2026
+
+
+FIT:    data read from "circle_quasi.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)= theta + x*omega
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   theta         omega        
+   0 3.6064577537e+03   0.00e+00  7.82e+00    1.000000e+00   1.000000e+00
+   4 4.1927443902e+01  -1.72e-02  7.82e-04   -1.584790e+00  -7.071584e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 41.9274
+rel. change during last iteration : -1.72066e-07
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.64347
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.98791
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+theta           = -1.58479         +/- 1.951        (123.1%)
+omega           = -0.707158        +/- 0.1771       (25.05%)
+
+correlation matrix of the fit parameters:
+                theta  omega  
+theta           1.000 
+omega          -0.878  1.000 
+
+
+*******************************************************************************
+Fri May 15 17:21:07 2026
+
+
+FIT:    data read from "circle.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 7
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = alpha + x*beta
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   alpha         beta         
+   0 2.0614026622e+03   0.00e+00  7.32e+00    1.000000e+00   1.000000e+00
+   4 2.1122942227e+01  -7.45e-03  7.32e-04   -1.624787e-01  -5.561856e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 21.1229
+rel. change during last iteration : -7.44748e-08
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.05538
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.22459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+alpha           = -0.162479        +/- 1.737        (1069%)
+beta            = -0.556186        +/- 0.1687       (30.33%)
+
+correlation matrix of the fit parameters:
+                alpha  beta   
+alpha           1.000 
+beta           -0.894  1.000 
+
+
+*******************************************************************************
+Fri May 15 17:21:07 2026
+
+
+FIT:    data read from "circle_quasi.dat" using (log($1)):(log($4))
+        format = x:z
+        #datapoints = 7
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)= theta + x*omega
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   theta         omega        
+   0 2.4736385463e+03   0.00e+00  7.32e+00    1.000000e+00   1.000000e+00
+   4 1.0117315618e+00  -6.43e-01  7.32e-04   -1.230881e+00  -6.288091e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 1.01173
+rel. change during last iteration : -6.43345e-06
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.449829
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.202346
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+theta           = -1.23088         +/- 0.3802       (30.89%)
+omega           = -0.628809        +/- 0.03692      (5.871%)
+
+correlation matrix of the fit parameters:
+                theta  omega  
+theta           1.000 
+omega          -0.894  1.000 
