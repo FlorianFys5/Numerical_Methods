@@ -656,4 +656,70 @@ std::tuple<double,double> quasiMC(std::function<double(Vector<double>)> f, Vecto
     double q2 = sum2*V/N;
     return std::make_tuple(q1,std::abs(q1-q2));
 }
+
+template<typename Random>
+std::tuple<double,double> strata(std::function<double(const Vector<double>&)> f, Vector<double> a, Vector<double> b, int N, Random& random_double, int nmin){
+    if (N<nmin) return plainMC(f, a, b, N, random_double);
+    int dim = a.size();
+    auto n_left = Vector<int>(dim);
+    auto n_right = Vector<int>(dim);
+    auto x = Vector<double>(dim);
+    auto mean_left = Vector<double>(dim);
+    auto mean_right = Vector<double>(dim);
+    auto sum_left = Vector<double>(dim);
+    auto sum_right = Vector<double>(dim);
+    for(int i=0;i<N;i++){
+        for(int j=0;j<dim;j++){
+            x[j]=a[j]+random_double()*(b[j]-a[j]);
+        }
+        double fx = f(x);
+        for(int j=0;j<dim;j++){
+            if (x[j]>(a[j]+b[j])/2){
+                n_right[j]++;
+                mean_right[j]+=fx;
+                sum_right[j]+=fx*fx;
+            }
+            else {
+                n_left[j]++;
+                mean_left[j]+=fx;
+                sum_left[j]+=fx*fx;
+            }
+        }
+    }
+    for(int i=0;i<dim;i++){
+        if(n_left[i]>0) mean_left[i]/=n_left[i];
+        if(n_right[i]>0) mean_right[i]/=n_right[i];
+    }
+    int kdiv=0;
+    double maxvar=0;
+    for(int i=0;i<dim;i++){
+        double var = std::fabs(mean_right[i]-mean_left[i]);
+        if (var>maxvar){
+            maxvar=var; 
+            kdiv=i;
+        }
+    }
+    auto a2 = a;
+    auto b2 = b;
+    a2[kdiv]=(a[kdiv]+b[kdiv])/2.0;
+    b2[kdiv]=(a[kdiv]+b[kdiv])/2.0;
+    int N_left;
+    int N_right;
+    if (n_left[kdiv]==0 || n_right[kdiv]==0){
+        N_left = N/2;
+        N_right = N-N_left;
+    }
+    else {
+        double sigma_left = std::sqrt(sum_left[kdiv]/n_left[kdiv]-mean_left[kdiv]*mean_left[kdiv]);
+        double sigma_right = std::sqrt(sum_right[kdiv]/n_right[kdiv]-mean_right[kdiv]*mean_right[kdiv]);
+        double sigma = sigma_left+sigma_right;
+        N_left=N/sigma*sigma_left;
+        N_right=N-N_left;
+        N_left = std::max(1,N_left);
+        N_right = std::max(1,N_right);
+    }
+    auto [Q1, err1] = strata (f,a,b2,N_left,random_double,nmin);
+    auto [Q2, err2] = strata(f,a2,b,N_right,random_double,nmin);
+    return std::make_tuple(Q1+Q2,std::sqrt(err1*err1+err2*err2));
+}
 }

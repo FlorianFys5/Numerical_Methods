@@ -2,3 +2,4 @@ Ellipsoid area= 24.9048, Error= 0.689869, Actual error=0.227941
 Cos product integral (lcg)= 1.35731, Error= 0.0232236, Actual error=0.0358929
 Cos product integral (c++)= 1.38076, Error= 0.0339585, Actual error=0.0124431
 Cos product integral (halton)= 1.37844, Error= 0.0213454, Actual error=0.0147608
+Cos product integral (strata)= 1.36475, Error= 0.0197942, Actual error=0.0284584

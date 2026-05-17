@@ -47,7 +47,10 @@ int main(){
     auto [Q2,err2]=linalg::plainMC(func,a3,b3,10000,rnd);
     auto [Q3,err3]=linalg::plainMC(func,a3,b3,10000,c_rnd);
     auto [Q4,err4]=linalg::quasiMC(func,a3,b3,10000);
+    linalg::lcg rnd_3(42);
+    auto [Q5,err5] = linalg::strata(func, a3, b3,10000,rnd_3,1000);
     file1<<"Cos product integral (lcg)= "<<Q2<<", Error= "<<err2<<", Actual error="<<std::abs(1.3932039296856768591842462603255-Q2)<<"\n";
     file1<<"Cos product integral (c++)= "<<Q3<<", Error= "<<err3<<", Actual error="<<std::abs(1.3932039296856768591842462603255-Q3)<<"\n";
     file1<<"Cos product integral (halton)= "<<Q4<<", Error= "<<err4<<", Actual error="<<std::abs(1.3932039296856768591842462603255-Q4)<<"\n";
+    file1<<"Cos product integral (strata)= "<<Q5<<", Error= "<<err5<<", Actual error="<<std::abs(1.3932039296856768591842462603255-Q5)<<"\n";
 }
