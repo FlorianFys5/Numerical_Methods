@@ -1,0 +1,9 @@
+Real roots Rosenbrock: (1, 1)
+Guessed: (0.5, 1.5)
+Real roots Himmelblau: (3, 2.00001)(3.58443, -1.84813)(-3.77934, -3.2832)(-2.80525, 3.13137)
+Guessed: (0.5, 1.5)(2.5, 3)(3, -2)(-3, -3)(-3, 3)
+Guessed energies: (-1)(-0)
+Energies: (-0.499656)(-0.0845145) Time: 0.000684005
+Quasi-Newton: (-0.499656)(-0.0845145) Time: 0.0019356
+Interpolation line search: (-0.499656)(-0.0845145) Time: 0.000642833
+For this small problem the jacobian is not that expensive and a larger number of function evaluations in the quasi newton method could be the resaon for a larger time.
