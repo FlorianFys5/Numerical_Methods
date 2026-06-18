@@ -7,4 +7,5 @@ set ylabel "y"
 set grid
 
 plot 'linear.dat' using 1:2 with lines title "Interpolant", \
-     'linear.dat' using 1:3 with lines title "Interpolant anti-derivative"
+     'linear.dat' using 1:3 with lines title "Interpolant anti-derivative", \
+     "linear.txt" u 1:2 w p pt 7 ps 1.5 title "Interpolation points"

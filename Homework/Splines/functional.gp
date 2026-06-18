@@ -7,3 +7,4 @@ set ylabel "y"
 set grid
 
 plot 'functional.dat' using 1:2 with lines title "Interpolant", \
+     "linear.txt" u 1:2 w p pt 7 ps 1.5 title "Interpolation points"

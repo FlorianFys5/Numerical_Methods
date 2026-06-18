@@ -8,4 +8,5 @@ set grid
 
 plot 'quadratic.dat' using 1:2 with lines title "Interpolant", \
      'quadratic.dat' using 1:3 with lines title "Derivative", \
-     'quadratic.dat' using 1:4 with lines title "Anti-Derivative"
+     'quadratic.dat' using 1:4 with lines title "Anti-Derivative", \
+     "linear.txt" u 1:2 w p pt 7 ps 1.5 title "Interpolation points"
