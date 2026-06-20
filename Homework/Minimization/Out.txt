@@ -1,0 +1,7 @@
+Guess: (2, 2)
+Rosenbrock minimum: (1.00005, 1.0001) Error: 0.000106963 Steps: 15
+Himmelblau minimum: (3, 2) Error: 9.54133e-08 Steps: 6
+Rosenbrock minimum (central difference): (1, 1) Error: 1.39604e-08 Steps: 15
+Himmelblau minimum (central difference): (3, 2) Error: 2.36056e-08 Steps: 6
+Guess Higgs: (1.60944, 125, 0.693147)
+Values: A=9.87621 m=125.972 Width=2.08633 Steps: 525
