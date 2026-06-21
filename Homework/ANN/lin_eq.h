@@ -589,4 +589,122 @@ struct ann{
    }
 };
 
+Vector<double> gradient(std::function<double(const Vector<double>&)> f, Vector<double> x, double fx){
+    auto gf = Vector<double>(x.size());
+    for (size_t i=0; i<x.size();i++){
+        auto dxi = (1.0+std::abs(x[i]))*std::pow(2.0,-26.0);
+        x[i]+=dxi;
+        gf[i]=(f(x)-fx)/dxi;
+        x[i]-=dxi;
+    }
+    return gf;
+}
+
+Matrix<double> hessian(std::function<double(const Vector<double>&)> f, Vector<double> x, double fx){
+    size_t dim = x.size();
+    auto H = Matrix<double>(dim,dim);
+    Vector<double> gfx = gradient(f,x,fx);
+    for (size_t j=0;j<dim;j++){
+        auto dxj=(1.0+std::abs(x[j]))*std::pow(2.0,-13.0);
+        x[j]+=dxj;
+        double fxj = f(x);
+        Vector<double> dgf=gradient(f,x,fxj)-gfx;
+        for (size_t i=0;i<dim;i++) H(i,j)=dgf[i]/dxj;
+        x[j]-=dxj;
+    }
+    return H;
+}
+
+Vector<double> newton(std::function<double(const Vector<double>&)> f, Vector<double> x, double acc=1e-4, size_t max_iter=1000){ 
+    double fx = f(x);
+    for(size_t i=0;i<max_iter;i++){              
+        auto g = gradient(f,x,fx);
+        if (g.norm() < acc) break;
+        auto H = hessian(f,x,fx);
+        for (size_t j=0;j<H.rows();j++) H(j,j)+=1e-6; // Levenberg regularization
+        auto dx = QR(H).solve(-1.0*g);
+        double λ = 1.0; 
+        while (λ >= 1.0/1024.0){       
+            if (f(x+λ*dx) < fx) break; 
+            λ /= 2;
+        }
+        x=x+λ*dx;
+        fx=f(x);
+    }
+    return x;
+}
+
+struct ann_func{
+   int n;
+   std::function<double(double)> f;
+   std::function<double(double)> dfdx;
+   std::function<double(double)> d2fdx2;
+   Vector<double> p;
+   ann_func(int m){
+    n = m;
+    f = [](double x){return x*std::exp(-x*x);};
+    dfdx = [](double x){return std::exp(-x*x)*(1.0-2.0*x*x);}; 
+    d2fdx2 = [](double x){return std::exp(-x*x)*(4.0*x*x*x-6.0*x);};
+    p = Vector<double>(3*n);
+    for(size_t i=0;i<p.size();i++) p[i] = 1.0;
+   }
+   double response(double x){
+    return response(x,p);
+   }
+   double response(double x,const Vector<double>& ps){
+      double sum = 0;
+      for (int i=0;i<n;i++){
+        sum += f((x-ps[3*i])/ps[3*i+1])*ps[3*i+2];
+      }
+      return sum;
+     }
+    double rd(double x){
+        return rd(x,p);
+    }
+    double rd(double x, Vector<double> ps){
+      double sum = 0;
+      for (int i=0;i<n;i++){
+        sum += dfdx((x-ps[3*i])/ps[3*i+1])*ps[3*i+2]/ps[3*i+1];
+        }
+      return sum;
+      }
+    double rdd(double x){
+        return rdd(x,p);
+    }
+    double rdd(double x, Vector<double> ps){
+      double sum = 0;
+      for (int i=0;i<n;i++){
+        sum += d2fdx2((x-ps[3*i])/ps[3*i+1])*ps[3*i+2]/ps[3*i+1]/ps[3*i+1];
+      }
+      return sum;
+     }
+   void train(std::function<double(double y, double yd, double ydd, double x)> phi, double a, double b, double c, double yc, double ydc, double alpha=1.0, double beta=1.0){
+    auto x = Vector<double>{};
+    double dx = (b-a)/20.0;
+    for(double i=a;i<=b;i+=dx) x.push_back(i);
+    auto Loss = [this, &x, phi, alpha, beta, c, yc, ydc](Vector<double> ps){
+        double sum = 0;
+        for (size_t i=0;i<x.size();i++){
+            double val = phi(response(x[i],ps),rd(x[i],ps),rdd(x[i],ps),x[i]);
+            sum += val*val;
+        }
+        double b1 = response(c,ps)-yc;
+        double b2 = rd(c,ps)-ydc;
+        sum += alpha*b1*b1;
+        sum += beta*b2*b2;
+        return sum;
+    };
+    std::mt19937 gen(20);
+    for (int i=0;i<10;i++){
+        auto ps = random_vector<double>(3*n, gen, -1.0,1.0);
+        for (int i=0;i<n;i++){
+            if (ps[3*i+1]<0) p[3*i+1]*=-1.0;
+            if (ps[3*i+1]<0.2) ps[3*i+1]+=0.2;
+        }
+        ps = newton(Loss,ps);
+        if (Loss(ps)<Loss(p)) p=ps;
+    }
+   }
+};
+
 }

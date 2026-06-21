@@ -1,8 +1,11 @@
 CXX = g++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++23 -O2
+CXXFLAGS = -Wall -Wextra -std=c++23 -O2
 LDLIBS = -lm
 
 all: Plot
+
+cos.dat: main
+	./main > cos.dat
 
 train.dat: main
 	./main > train.dat
@@ -16,9 +19,10 @@ main: main.o
 main.o: main.cpp lin_eq.h
 	$(CXX) $(CXXFLAGS) -c main.cpp -o main.o
 
-Plot: plot.dat train.dat
+Plot: plot.dat train.dat cos.dat
 	gnuplot plot.gp
 	gnuplot plotb.gp
+	gnuplot cos.gp
 
 clean:
 	rm -f main *.o *.dat
