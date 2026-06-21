@@ -5,3 +5,5 @@ Rosenbrock minimum (central difference): (1, 1) Error: 1.39604e-08 Steps: 15
 Himmelblau minimum (central difference): (3, 2) Error: 2.36056e-08 Steps: 6
 Guess Higgs: (1.60944, 125, 0.693147)
 Values: A=9.87621 m=125.972 Width=2.08633 Steps: 525
+The convergence for the Higgs fit is very sensitive to the initial guess.
+I used the Newton method from exercise A. If one should have implemented the Gauss Newton method then I did this in the NN exercise.

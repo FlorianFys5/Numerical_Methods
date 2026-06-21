@@ -46,4 +46,6 @@ int main(){
     for (double E=95.0;E<165.0;E+=0.5){
         file2<<E<<" "<<BreitWigner(E,vals)<<"\n";
     }
+    file1<<"The convergence for the Higgs fit is very sensitive to the initial guess."<<"\n";
+    file1<<"I used the Newton method from exercise A. If one should have implemented the Gauss Newton method then I did this in the NN exercise."<<"\n";
 }
